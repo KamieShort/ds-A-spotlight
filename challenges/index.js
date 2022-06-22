@@ -33,7 +33,18 @@ function filter(arr, callback) {
 console.log(filter([2, 6, 5], (n) => n % 2 === 0));
 console.log("dog");
 
+function every(arr, callback) {
+  for (let i = 0; i < arr.length; i++) {
+    const num = callback(arr[i]);
+    if (num === false) return false;
+  }
+  return true;
+}
+
+console.log(every([2, 4, 7], (n) => n % 2 === 0));
+
 const addExcitement = addPunctuation("!!!");
+const addUnsure = addPunctuation("?!?");
 
 function addPunctuation(punctuation) {
   return (x) => {
@@ -41,6 +52,9 @@ function addPunctuation(punctuation) {
   };
 }
 console.log(addExcitement("Hello Cool World"));
+console.log(addExcitement("Pokemon, gotta catch em all"));
+console.log(addUnsure("Hello cool world"));
+console.log(addUnsure("Pokemon, gotta catch em all"));
 
 function addFirst(element) {
   return (array) => {
