@@ -41,3 +41,17 @@ function addPunctuation(punctuation) {
   };
 }
 console.log(addExcitement("Hello Cool World"));
+
+function addFirst(element) {
+  return (array) => {
+    array.unshift(element);
+    return array;
+  };
+}
+
+const addOrange = addFirst("orange");
+console.log(addOrange(["red", "blue", "green"]));
+console.log(addOrange(["blue", "blue", "blue"]));
+const addCat = addFirst("cat");
+console.log(addCat(["dog", "bird", "lizard"]));
+console.log(addCat(["lizard", "donkey", "whale"]));
