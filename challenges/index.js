@@ -81,3 +81,24 @@ function some(arr, callback) {
 
 console.log(some([1, 6, 5], (n) => n % 2 === 0));
 console.log(some([1, 7, 3], (n) => n % 2 === 0));
+
+// function fib(n) {
+//   let addNum = 1;
+//   for (let i = 0; i < n; i++) {
+//     if (addNum === 0) {
+//       addNum++;
+//     } else {
+//       addNum += addNum;
+//     }
+//   }
+//   return addNum;
+// }
+
+// console.log(fib(2));
+
+function fib(n) {
+  if (n <= 1) return n;
+  return fib(n - 2) + fib(n - 1);
+}
+
+console.log(fib(8));
