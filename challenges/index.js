@@ -32,3 +32,12 @@ function filter(arr, callback) {
 
 console.log(filter([2, 6, 5], (n) => n % 2 === 0));
 console.log("dog");
+
+const addExcitement = addPunctuation("!!!");
+
+function addPunctuation(punctuation) {
+  return (x) => {
+    return x + punctuation;
+  };
+}
+console.log(addExcitement("Hello Cool World"));
